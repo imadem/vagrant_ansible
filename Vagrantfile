@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     ansible.vm.network :forwarded_port, guest: 22, host: 12345, auto_correct: true
     ansible.vm.network :forwarded_port, guest: 8111, host: 8111, auto_correct: true
     ansible.vm.provision "shell" do |provision|
-     # provision.path = "provision_ansible.sh"
+     provision.path = "provision_ansible.sh"
     end
   end
 end
